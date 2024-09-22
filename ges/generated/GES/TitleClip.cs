@@ -13,7 +13,7 @@ namespace GES {
 
 		public TitleClip (IntPtr raw) : base(raw) {}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_title_clip_new();
 
 		public TitleClip () : base (IntPtr.Zero)
@@ -25,7 +25,7 @@ namespace GES {
 			Raw = ges_title_clip_new();
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern void ges_title_clip_set_background(IntPtr raw, uint background);
 
 		[Obsolete]
@@ -42,7 +42,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern void ges_title_clip_set_color(IntPtr raw, uint color);
 
 		[Obsolete]
@@ -59,10 +59,10 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_title_clip_get_font_desc(IntPtr raw);
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern void ges_title_clip_set_font_desc(IntPtr raw, IntPtr font_desc);
 
 		[Obsolete]
@@ -80,10 +80,10 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern int ges_title_clip_get_halignment(IntPtr raw);
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern void ges_title_clip_set_halignment(IntPtr raw, int halign);
 
 		[Obsolete]
@@ -99,10 +99,10 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_title_clip_get_text(IntPtr raw);
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern void ges_title_clip_set_text(IntPtr raw, IntPtr text);
 
 		[Obsolete]
@@ -120,10 +120,10 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern int ges_title_clip_get_valignment(IntPtr raw);
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern void ges_title_clip_set_valignment(IntPtr raw, int valign);
 
 		[Obsolete]
@@ -139,10 +139,10 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern double ges_title_clip_get_xpos(IntPtr raw);
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern void ges_title_clip_set_xpos(IntPtr raw, double position);
 
 		[Obsolete]
@@ -158,10 +158,10 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern double ges_title_clip_get_ypos(IntPtr raw);
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern void ges_title_clip_set_ypos(IntPtr raw, double position);
 
 		[Obsolete]
@@ -201,7 +201,7 @@ namespace GES {
 
 		// End of the ABI representation.
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_title_clip_get_type();
 
 		public static new GLib.GType GType { 
@@ -212,7 +212,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern uint ges_title_clip_get_background_color(IntPtr raw);
 
 		[Obsolete]
@@ -224,7 +224,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern uint ges_title_clip_get_text_color(IntPtr raw);
 
 		[Obsolete]

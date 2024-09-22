@@ -19,7 +19,7 @@ namespace GES {
 	}
 
 	internal class PipelineFlagsGType {
-		[DllImport ("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport ("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_pipeline_flags_get_type ();
 
 		public static GLib.GType GType {

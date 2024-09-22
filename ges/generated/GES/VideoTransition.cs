@@ -13,7 +13,7 @@ namespace GES {
 
 		public VideoTransition (IntPtr raw) : base(raw) {}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_video_transition_new();
 
 		public VideoTransition () : base (IntPtr.Zero)
@@ -25,7 +25,7 @@ namespace GES {
 			Raw = ges_video_transition_new();
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern int ges_video_transition_get_border(IntPtr raw);
 
 		[GLib.Property ("border")]
@@ -57,7 +57,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern int ges_video_transition_get_transition_type(IntPtr raw);
 
 		[GLib.Property ("transition-type")]
@@ -98,7 +98,7 @@ namespace GES {
 
 		// End of the ABI representation.
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_video_transition_get_type();
 
 		public static new GLib.GType GType { 
@@ -109,7 +109,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_video_transition_is_inverted(IntPtr raw);
 
 		public bool IsInverted { 
@@ -120,7 +120,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern void ges_video_transition_set_inverted(IntPtr raw, bool inverted);
 
 		public bool Inverted { 
@@ -129,7 +129,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_video_transition_set_transition_type(IntPtr raw, int type);
 
 		public bool SetTransitionType(GES.VideoStandardTransitionType type) {

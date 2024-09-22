@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <api parser_version="3">
-  <namespace name="GES" library="ges-1.0">
+  <namespace name="GES" library="ges-1.0-0">
     <enum name="AssetLoadingReturn" cname="GESAssetLoadingReturn" type="enum">
       <member cname="GES_ASSET_LOADING_ERROR" name="Error" value="0"/>
       <member cname="GES_ASSET_LOADING_ASYNC" name="Async" value="1"/>

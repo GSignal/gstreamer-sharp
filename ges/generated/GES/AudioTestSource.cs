@@ -42,7 +42,7 @@ namespace GES {
 
 		// End of the ABI representation.
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_audio_test_source_get_type();
 
 		public static new GLib.GType GType { 
@@ -53,10 +53,10 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern double ges_audio_test_source_get_freq(IntPtr raw);
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern void ges_audio_test_source_set_freq(IntPtr raw, double freq);
 
 		public double Freq { 
@@ -70,10 +70,10 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern double ges_audio_test_source_get_volume(IntPtr raw);
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern void ges_audio_test_source_set_volume(IntPtr raw, double volume);
 
 		public double Volume { 

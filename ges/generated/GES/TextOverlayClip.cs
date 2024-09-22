@@ -13,7 +13,7 @@ namespace GES {
 
 		public TextOverlayClip (IntPtr raw) : base(raw) {}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_text_overlay_clip_new();
 
 		public TextOverlayClip () : base (IntPtr.Zero)
@@ -25,10 +25,10 @@ namespace GES {
 			Raw = ges_text_overlay_clip_new();
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern uint ges_text_overlay_clip_get_color(IntPtr raw);
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern void ges_text_overlay_clip_set_color(IntPtr raw, uint color);
 
 		[GLib.Property ("color")]
@@ -43,10 +43,10 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_text_overlay_clip_get_font_desc(IntPtr raw);
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern void ges_text_overlay_clip_set_font_desc(IntPtr raw, IntPtr font_desc);
 
 		[GLib.Property ("font-desc")]
@@ -63,7 +63,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern int ges_text_overlay_clip_get_halignment(IntPtr raw);
 
 		[GLib.Property ("halignment")]
@@ -80,10 +80,10 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_text_overlay_clip_get_text(IntPtr raw);
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern void ges_text_overlay_clip_set_text(IntPtr raw, IntPtr text);
 
 		[GLib.Property ("text")]
@@ -100,7 +100,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern int ges_text_overlay_clip_get_valignment(IntPtr raw);
 
 		[GLib.Property ("valignment")]
@@ -117,10 +117,10 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern double ges_text_overlay_clip_get_xpos(IntPtr raw);
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern void ges_text_overlay_clip_set_xpos(IntPtr raw, double position);
 
 		[GLib.Property ("xpos")]
@@ -135,10 +135,10 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern double ges_text_overlay_clip_get_ypos(IntPtr raw);
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern void ges_text_overlay_clip_set_ypos(IntPtr raw, double position);
 
 		[GLib.Property ("ypos")]
@@ -177,7 +177,7 @@ namespace GES {
 
 		// End of the ABI representation.
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_text_overlay_clip_get_type();
 
 		public static new GLib.GType GType { 
@@ -188,7 +188,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern void ges_text_overlay_clip_set_halign(IntPtr raw, int halign);
 
 		public GES.TextHAlign Halign { 
@@ -197,7 +197,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern void ges_text_overlay_clip_set_valign(IntPtr raw, int valign);
 
 		public GES.TextVAlign Valign { 

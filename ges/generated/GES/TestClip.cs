@@ -13,7 +13,7 @@ namespace GES {
 
 		public TestClip (IntPtr raw) : base(raw) {}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_test_clip_new();
 
 		public TestClip () : base (IntPtr.Zero)
@@ -25,7 +25,7 @@ namespace GES {
 			Raw = ges_test_clip_new();
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_test_clip_new_for_nick(IntPtr nick);
 
 		public TestClip (string nick) : base (IntPtr.Zero)
@@ -56,7 +56,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern void ges_test_clip_set_mute(IntPtr raw, bool mute);
 
 		[GLib.Property ("mute")]
@@ -72,10 +72,10 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern double ges_test_clip_get_volume(IntPtr raw);
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern void ges_test_clip_set_volume(IntPtr raw, double volume);
 
 		[GLib.Property ("volume")]
@@ -90,10 +90,10 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern int ges_test_clip_get_vpattern(IntPtr raw);
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern void ges_test_clip_set_vpattern(IntPtr raw, int vpattern);
 
 		[GLib.Property ("vpattern")]
@@ -132,7 +132,7 @@ namespace GES {
 
 		// End of the ABI representation.
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_test_clip_get_type();
 
 		public static new GLib.GType GType { 
@@ -143,10 +143,10 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern double ges_test_clip_get_frequency(IntPtr raw);
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern void ges_test_clip_set_frequency(IntPtr raw, double freq);
 
 		public double Frequency { 
@@ -160,7 +160,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_test_clip_is_muted(IntPtr raw);
 
 		public bool IsMuted { 

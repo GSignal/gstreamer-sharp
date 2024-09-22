@@ -18,10 +18,10 @@ namespace GES {
 			CreateNativeObject (new string [0], new GLib.Value [0]);
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern int ges_track_element_asset_get_track_type(IntPtr raw);
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern void ges_track_element_asset_set_track_type(IntPtr raw, int type);
 
 		[GLib.Property ("track-type")]
@@ -60,7 +60,7 @@ namespace GES {
 
 		// End of the ABI representation.
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_track_element_asset_get_type();
 
 		public static new GLib.GType GType { 

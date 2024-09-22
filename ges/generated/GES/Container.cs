@@ -517,7 +517,7 @@ namespace GES {
 
 		// End of the ABI representation.
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_container_get_type();
 
 		public static new GLib.GType GType { 
@@ -528,7 +528,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_container_group(IntPtr containers);
 
 		public static GES.Container Group(GLib.List containers) {
@@ -541,7 +541,7 @@ namespace GES {
 			return Group (null);
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_container_add(IntPtr raw, IntPtr child);
 
 		public bool Add(GES.TimelineElement child) {
@@ -550,7 +550,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_container_edit(IntPtr raw, IntPtr layers, int new_layer_priority, int mode, int edge, ulong position);
 
 		public bool Edit(GLib.List layers, int new_layer_priority, GES.EditMode mode, GES.Edge edge, ulong position) {
@@ -559,7 +559,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_container_get_children(IntPtr raw, bool recursive);
 
 		public GES.TimelineElement[] GetChildren(bool recursive) {
@@ -568,7 +568,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_container_remove(IntPtr raw, IntPtr child);
 
 		public bool Remove(GES.TimelineElement child) {
@@ -577,7 +577,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_container_ungroup(IntPtr raw, bool recursive);
 
 		public GES.Container[] Ungroup(bool recursive) {

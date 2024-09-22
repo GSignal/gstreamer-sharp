@@ -13,7 +13,7 @@ namespace GES {
 
 		public EffectClip (IntPtr raw) : base(raw) {}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_effect_clip_new(IntPtr video_bin_description, IntPtr audio_bin_description);
 
 		public EffectClip (string video_bin_description, string audio_bin_description) : base (IntPtr.Zero)
@@ -79,7 +79,7 @@ namespace GES {
 
 		// End of the ABI representation.
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_effect_clip_get_type();
 
 		public static new GLib.GType GType { 

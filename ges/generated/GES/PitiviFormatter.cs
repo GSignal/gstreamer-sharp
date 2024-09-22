@@ -13,7 +13,7 @@ namespace GES {
 
 		public PitiviFormatter (IntPtr raw) : base(raw) {}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_pitivi_formatter_new();
 
 		public PitiviFormatter () : base (IntPtr.Zero)
@@ -49,7 +49,7 @@ namespace GES {
 
 		// End of the ABI representation.
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_pitivi_formatter_get_type();
 
 		public static new GLib.GType GType { 

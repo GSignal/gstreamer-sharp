@@ -13,7 +13,7 @@ namespace GES {
 
 		public Timeline (IntPtr raw) : base(raw) {}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_timeline_new();
 
 		public Timeline () : base (IntPtr.Zero)
@@ -25,7 +25,7 @@ namespace GES {
 			Raw = ges_timeline_new();
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_timeline_new_audio_video();
 
 		public static Timeline NewAudioVideo()
@@ -34,7 +34,7 @@ namespace GES {
 			return result;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_timeline_new_from_uri(IntPtr uri);
 
 		public Timeline (string uri) : base (IntPtr.Zero)
@@ -50,10 +50,10 @@ namespace GES {
 			GLib.Marshaller.Free (native_uri);
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_timeline_get_auto_transition(IntPtr raw);
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern void ges_timeline_set_auto_transition(IntPtr raw, bool auto_transition);
 
 		[GLib.Property ("auto-transition")]
@@ -68,7 +68,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern ulong ges_timeline_get_duration(IntPtr raw);
 
 		[GLib.Property ("duration")]
@@ -80,10 +80,10 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern ulong ges_timeline_get_snapping_distance(IntPtr raw);
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern void ges_timeline_set_snapping_distance(IntPtr raw, ulong snapping_distance);
 
 		[GLib.Property ("snapping-distance")]
@@ -98,7 +98,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_timeline_get_layers(IntPtr raw);
 
 		public GES.Layer[] Layers {
@@ -109,7 +109,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_timeline_get_tracks(IntPtr raw);
 
 		public GES.Track[] Tracks {
@@ -696,7 +696,7 @@ namespace GES {
 
 		// End of the ABI representation.
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_timeline_get_type();
 
 		public static new GLib.GType GType { 
@@ -707,7 +707,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_timeline_add_layer(IntPtr raw, IntPtr layer);
 
 		public bool AddLayer(GES.Layer layer) {
@@ -716,7 +716,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_timeline_add_track(IntPtr raw, IntPtr track);
 
 		public bool AddTrack(GES.Track track) {
@@ -725,7 +725,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_timeline_append_layer(IntPtr raw);
 
 		public GES.Layer AppendLayer() {
@@ -734,7 +734,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_timeline_commit(IntPtr raw);
 
 		public bool Commit() {
@@ -743,7 +743,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_timeline_commit_sync(IntPtr raw);
 
 		public bool CommitSync() {
@@ -752,7 +752,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_timeline_get_element(IntPtr raw, IntPtr name);
 
 		public GES.TimelineElement GetElement(string name) {
@@ -763,7 +763,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_timeline_get_groups(IntPtr raw);
 
 		public GES.Group[] Groups { 
@@ -774,7 +774,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_timeline_get_layer(IntPtr raw, uint priority);
 
 		public GES.Layer GetLayer(uint priority) {
@@ -783,7 +783,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_timeline_get_pad_for_track(IntPtr raw, IntPtr track);
 
 		public Gst.Pad GetPadForTrack(GES.Track track) {
@@ -792,7 +792,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_timeline_get_track_for_pad(IntPtr raw, IntPtr pad);
 
 		public GES.Track GetTrackForPad(Gst.Pad pad) {
@@ -801,7 +801,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_timeline_is_empty(IntPtr raw);
 
 		public bool IsEmpty { 
@@ -812,7 +812,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern unsafe bool ges_timeline_load_from_uri(IntPtr raw, IntPtr uri, out IntPtr error);
 
 		public unsafe bool LoadFromUri(string uri) {
@@ -825,7 +825,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_timeline_move_layer(IntPtr raw, IntPtr layer, uint new_layer_priority);
 
 		public bool MoveLayer(GES.Layer layer, uint new_layer_priority) {
@@ -834,7 +834,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_timeline_paste_element(IntPtr raw, IntPtr element, ulong position, int layer_priority);
 
 		public GES.TimelineElement PasteElement(GES.TimelineElement element, ulong position, int layer_priority) {
@@ -843,7 +843,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_timeline_remove_layer(IntPtr raw, IntPtr layer);
 
 		public bool RemoveLayer(GES.Layer layer) {
@@ -852,7 +852,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_timeline_remove_track(IntPtr raw, IntPtr track);
 
 		public bool RemoveTrack(GES.Track track) {
@@ -861,7 +861,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern unsafe bool ges_timeline_save_to_uri(IntPtr raw, IntPtr uri, IntPtr formatter_asset, bool overwrite, out IntPtr error);
 
 		public unsafe bool SaveToUri(string uri, GES.Asset formatter_asset, bool overwrite) {
@@ -878,7 +878,7 @@ namespace GES {
 			return SaveToUri (uri, null, overwrite);
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_extractable_get_asset(IntPtr raw);
 
 		public GES.Asset Asset { 
@@ -889,7 +889,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_extractable_get_id(IntPtr raw);
 
 		public string Id { 
@@ -900,7 +900,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_extractable_set_asset(IntPtr raw, IntPtr asset);
 
 		public bool SetAsset(GES.Asset asset) {
@@ -909,7 +909,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_meta_container_add_metas_from_string(IntPtr raw, IntPtr str);
 
 		public bool AddMetasFromString(string str) {
@@ -920,7 +920,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_meta_container_check_meta_registered(IntPtr raw, IntPtr meta_item, int flags, IntPtr type);
 
 		public bool CheckMetaRegistered(string meta_item, GES.MetaFlag flags, GLib.GType type) {
@@ -931,7 +931,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern void ges_meta_container_foreach(IntPtr raw, GESSharp.MetaForeachFuncNative func, IntPtr user_data);
 
 		public void Foreach(GES.MetaForeachFunc func) {
@@ -939,7 +939,7 @@ namespace GES {
 			ges_meta_container_foreach(Handle, func_wrapper.NativeDelegate, IntPtr.Zero);
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_meta_container_get_boolean(IntPtr raw, IntPtr meta_item, out bool dest);
 
 		public bool GetBoolean(string meta_item, out bool dest) {
@@ -950,7 +950,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_meta_container_get_date_time(IntPtr raw, IntPtr meta_item, out IntPtr dest);
 
 		public bool GetDateTime(string meta_item, out Gst.DateTime dest) {
@@ -963,7 +963,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_meta_container_get_double(IntPtr raw, IntPtr meta_item, out double dest);
 
 		public bool GetDouble(string meta_item, out double dest) {
@@ -974,7 +974,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_meta_container_get_float(IntPtr raw, IntPtr meta_item, out float dest);
 
 		public bool GetFloat(string meta_item, out float dest) {
@@ -985,7 +985,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_meta_container_get_int(IntPtr raw, IntPtr meta_item, out int dest);
 
 		public bool GetInt(string meta_item, out int dest) {
@@ -996,7 +996,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_meta_container_get_int64(IntPtr raw, IntPtr meta_item, out long dest);
 
 		public bool GetInt64(string meta_item, out long dest) {
@@ -1007,7 +1007,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_meta_container_get_meta(IntPtr raw, IntPtr key);
 
 		public GLib.Value GetMeta(string key) {
@@ -1018,7 +1018,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_meta_container_get_string(IntPtr raw, IntPtr meta_item);
 
 		public string GetString(string meta_item) {
@@ -1029,7 +1029,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_meta_container_get_uint(IntPtr raw, IntPtr meta_item, out uint dest);
 
 		public bool GetUint(string meta_item, out uint dest) {
@@ -1040,7 +1040,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_meta_container_get_uint64(IntPtr raw, IntPtr meta_item, out ulong dest);
 
 		public bool GetUint64(string meta_item, out ulong dest) {
@@ -1051,7 +1051,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_meta_container_metas_to_string(IntPtr raw);
 
 		public string MetasToString() {
@@ -1060,7 +1060,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_meta_container_register_meta(IntPtr raw, int flags, IntPtr meta_item, IntPtr value);
 
 		public bool RegisterMeta(GES.MetaFlag flags, string meta_item, GLib.Value value) {
@@ -1073,7 +1073,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_meta_container_register_meta_boolean(IntPtr raw, int flags, IntPtr meta_item, bool value);
 
 		public bool RegisterMetaBoolean(GES.MetaFlag flags, string meta_item, bool value) {
@@ -1084,7 +1084,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_meta_container_register_meta_date_time(IntPtr raw, int flags, IntPtr meta_item, IntPtr value);
 
 		public bool RegisterMetaDateTime(GES.MetaFlag flags, string meta_item, Gst.DateTime value) {
@@ -1099,7 +1099,7 @@ namespace GES {
 			return RegisterMetaDateTime (flags, meta_item, null);
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_meta_container_register_meta_double(IntPtr raw, int flags, IntPtr meta_item, double value);
 
 		public bool RegisterMetaDouble(GES.MetaFlag flags, string meta_item, double value) {
@@ -1110,7 +1110,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_meta_container_register_meta_float(IntPtr raw, int flags, IntPtr meta_item, float value);
 
 		public bool RegisterMetaFloat(GES.MetaFlag flags, string meta_item, float value) {
@@ -1121,7 +1121,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_meta_container_register_meta_int(IntPtr raw, int flags, IntPtr meta_item, int value);
 
 		public bool RegisterMetaInt(GES.MetaFlag flags, string meta_item, int value) {
@@ -1132,7 +1132,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_meta_container_register_meta_int64(IntPtr raw, int flags, IntPtr meta_item, long value);
 
 		public bool RegisterMetaInt64(GES.MetaFlag flags, string meta_item, long value) {
@@ -1143,7 +1143,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_meta_container_register_meta_string(IntPtr raw, int flags, IntPtr meta_item, IntPtr value);
 
 		public bool RegisterMetaString(GES.MetaFlag flags, string meta_item, string value) {
@@ -1160,7 +1160,7 @@ namespace GES {
 			return RegisterMetaString (flags, meta_item, null);
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_meta_container_register_meta_uint(IntPtr raw, int flags, IntPtr meta_item, uint value);
 
 		public bool RegisterMetaUint(GES.MetaFlag flags, string meta_item, uint value) {
@@ -1171,7 +1171,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_meta_container_register_meta_uint64(IntPtr raw, int flags, IntPtr meta_item, ulong value);
 
 		public bool RegisterMetaUint64(GES.MetaFlag flags, string meta_item, ulong value) {
@@ -1182,7 +1182,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_meta_container_set_boolean(IntPtr raw, IntPtr meta_item, bool value);
 
 		public bool SetBoolean(string meta_item, bool value) {
@@ -1193,7 +1193,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_meta_container_set_date_time(IntPtr raw, IntPtr meta_item, IntPtr value);
 
 		public bool SetDateTime(string meta_item, Gst.DateTime value) {
@@ -1204,7 +1204,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_meta_container_set_double(IntPtr raw, IntPtr meta_item, double value);
 
 		public bool SetDouble(string meta_item, double value) {
@@ -1215,7 +1215,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_meta_container_set_float(IntPtr raw, IntPtr meta_item, float value);
 
 		public bool SetFloat(string meta_item, float value) {
@@ -1226,7 +1226,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_meta_container_set_int(IntPtr raw, IntPtr meta_item, int value);
 
 		public bool SetInt(string meta_item, int value) {
@@ -1237,7 +1237,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_meta_container_set_int64(IntPtr raw, IntPtr meta_item, long value);
 
 		public bool SetInt64(string meta_item, long value) {
@@ -1248,7 +1248,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_meta_container_set_meta(IntPtr raw, IntPtr meta_item, IntPtr value);
 
 		public bool SetMeta(string meta_item, GLib.Value value) {
@@ -1265,7 +1265,7 @@ namespace GES {
 			return SetMeta (meta_item, GLib.Value.Empty);
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_meta_container_set_string(IntPtr raw, IntPtr meta_item, IntPtr value);
 
 		public bool SetString(string meta_item, string value) {
@@ -1278,7 +1278,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_meta_container_set_uint(IntPtr raw, IntPtr meta_item, uint value);
 
 		public bool SetUint(string meta_item, uint value) {
@@ -1289,7 +1289,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_meta_container_set_uint64(IntPtr raw, IntPtr meta_item, ulong value);
 
 		public bool SetUint64(string meta_item, ulong value) {

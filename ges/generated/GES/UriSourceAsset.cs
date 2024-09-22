@@ -42,7 +42,7 @@ namespace GES {
 
 		// End of the ABI representation.
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_uri_source_asset_get_type();
 
 		public static new GLib.GType GType { 
@@ -53,7 +53,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_uri_source_asset_get_filesource_asset(IntPtr raw);
 
 		public GES.UriClipAsset FilesourceAsset { 
@@ -64,7 +64,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_uri_source_asset_get_stream_info(IntPtr raw);
 
 		public Gst.PbUtils.DiscovererStreamInfo StreamInfo { 
@@ -75,7 +75,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_uri_source_asset_get_stream_uri(IntPtr raw);
 
 		public string StreamUri { 

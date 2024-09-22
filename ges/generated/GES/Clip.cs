@@ -18,7 +18,7 @@ namespace GES {
 			CreateNativeObject (new string [0], new GLib.Value [0]);
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_clip_get_layer(IntPtr raw);
 
 		[GLib.Property ("layer")]
@@ -30,10 +30,10 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern int ges_clip_get_supported_formats(IntPtr raw);
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern void ges_clip_set_supported_formats(IntPtr raw, int supportedformats);
 
 		[GLib.Property ("supported-formats")]
@@ -88,7 +88,7 @@ namespace GES {
 
 		// End of the ABI representation.
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_clip_get_type();
 
 		public static new GLib.GType GType { 
@@ -99,7 +99,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_clip_add_asset(IntPtr raw, IntPtr asset);
 
 		public GES.TrackElement AddAsset(GES.Asset asset) {
@@ -108,7 +108,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_clip_find_track_element(IntPtr raw, IntPtr track, IntPtr type);
 
 		public GES.TrackElement FindTrackElement(GES.Track track, GLib.GType type) {
@@ -121,7 +121,7 @@ namespace GES {
 			return FindTrackElement (null, type);
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_clip_find_track_elements(IntPtr raw, IntPtr track, int track_type, IntPtr type);
 
 		public GES.TrackElement[] FindTrackElements(GES.Track track, GES.TrackType track_type, GLib.GType type) {
@@ -134,7 +134,7 @@ namespace GES {
 			return FindTrackElements (null, track_type, type);
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern int ges_clip_get_top_effect_index(IntPtr raw, IntPtr effect);
 
 		public int GetTopEffectIndex(GES.BaseEffect effect) {
@@ -143,7 +143,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern int ges_clip_get_top_effect_position(IntPtr raw, IntPtr effect);
 
 		public int GetTopEffectPosition(GES.BaseEffect effect) {
@@ -152,7 +152,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_clip_get_top_effects(IntPtr raw);
 
 		public GES.TrackElement[] TopEffects { 
@@ -163,7 +163,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_clip_move_to_layer(IntPtr raw, IntPtr layer);
 
 		public bool MoveToLayer(GES.Layer layer) {
@@ -172,7 +172,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_clip_set_top_effect_index(IntPtr raw, IntPtr effect, uint newindex);
 
 		public bool SetTopEffectIndex(GES.BaseEffect effect, uint newindex) {
@@ -181,7 +181,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_clip_set_top_effect_priority(IntPtr raw, IntPtr effect, uint newpriority);
 
 		public bool SetTopEffectPriority(GES.BaseEffect effect, uint newpriority) {
@@ -190,7 +190,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_clip_split(IntPtr raw, ulong position);
 
 		public GES.Clip Split(ulong position) {

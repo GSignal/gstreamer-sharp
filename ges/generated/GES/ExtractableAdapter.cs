@@ -102,7 +102,7 @@ namespace GES {
 			implementor = GLib.Object.GetObject (handle);
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_extractable_get_type();
 
 		private static GLib.GType _gtype = new GLib.GType (ges_extractable_get_type ());
@@ -155,7 +155,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_extractable_get_asset(IntPtr raw);
 
 		public GES.Asset Asset { 
@@ -166,7 +166,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_extractable_get_id(IntPtr raw);
 
 		public string Id { 
@@ -177,7 +177,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_extractable_set_asset(IntPtr raw, IntPtr asset);
 
 		public bool SetAsset(GES.Asset asset) {

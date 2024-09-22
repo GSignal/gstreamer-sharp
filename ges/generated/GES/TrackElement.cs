@@ -33,7 +33,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_track_element_get_track(IntPtr raw);
 
 		[GLib.Property ("track")]
@@ -45,10 +45,10 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern int ges_track_element_get_track_type(IntPtr raw);
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern void ges_track_element_set_track_type(IntPtr raw, int type);
 
 		[GLib.Property ("track-type")]
@@ -435,7 +435,7 @@ namespace GES {
 
 		// End of the ABI representation.
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_track_element_get_type();
 
 		public static new GLib.GType GType { 
@@ -446,7 +446,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern void ges_track_element_add_children_props(IntPtr raw, IntPtr element, IntPtr[] wanted_categories, IntPtr[] blacklist, IntPtr[] whitelist);
 
 		public void AddChildrenProps(Gst.Element element, string[] wanted_categories, string[] blacklist, string[] whitelist) {
@@ -472,7 +472,7 @@ namespace GES {
 			AddChildrenProps (element, null, null, null);
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_track_element_edit(IntPtr raw, IntPtr layers, int mode, int edge, ulong position);
 
 		public bool Edit(GLib.List layers, GES.EditMode mode, GES.Edge edge, ulong position) {
@@ -481,7 +481,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern System.IntPtr ges_track_element_get_all_control_bindings(IntPtr raw);
 
 		public string[] AllControlBindings { 
@@ -492,7 +492,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_track_element_get_control_binding(IntPtr raw, IntPtr property_name);
 
 		public Gst.ControlBinding GetControlBinding(string property_name) {
@@ -503,7 +503,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_track_element_get_element(IntPtr raw);
 
 		public Gst.Element Element { 
@@ -514,7 +514,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_track_element_get_gnlobject(IntPtr raw);
 
 		[Obsolete]
@@ -526,7 +526,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_track_element_get_nleobject(IntPtr raw);
 
 		public Gst.Element Nleobject { 
@@ -537,7 +537,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_track_element_is_active(IntPtr raw);
 
 		public bool IsActive { 
@@ -548,7 +548,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_track_element_lookup_child(IntPtr raw, IntPtr prop_name, out IntPtr element, out IntPtr pspec);
 
 		[Obsolete]
@@ -562,7 +562,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_track_element_remove_control_binding(IntPtr raw, IntPtr property_name);
 
 		public bool RemoveControlBinding(string property_name) {
@@ -573,7 +573,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_track_element_set_active(IntPtr raw, bool active);
 
 		public bool SetActive(bool active) {
@@ -582,7 +582,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_track_element_set_control_source(IntPtr raw, IntPtr source, IntPtr property_name, IntPtr binding_type);
 
 		public bool SetControlSource(Gst.ControlSource source, string property_name, string binding_type) {

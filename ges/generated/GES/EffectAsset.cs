@@ -18,7 +18,7 @@ namespace GES {
 			CreateNativeObject (new string [0], new GLib.Value [0]);
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_effect_asset_get_type();
 
 		public static new GLib.GType GType { 

@@ -13,7 +13,7 @@ namespace GES {
 
 		public TransitionClip (IntPtr raw) : base(raw) {}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_transition_clip_new(int vtype);
 
 		public TransitionClip (GES.VideoStandardTransitionType vtype) : base (IntPtr.Zero)
@@ -29,7 +29,7 @@ namespace GES {
 			Raw = ges_transition_clip_new((int) vtype);
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_transition_clip_new_for_nick(IntPtr nick);
 
 		public TransitionClip (string nick) : base (IntPtr.Zero)
@@ -93,7 +93,7 @@ namespace GES {
 
 		// End of the ABI representation.
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_transition_clip_get_type();
 
 		public static new GLib.GType GType { 

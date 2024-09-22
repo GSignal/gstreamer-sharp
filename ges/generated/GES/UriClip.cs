@@ -13,7 +13,7 @@ namespace GES {
 
 		public UriClip (IntPtr raw) : base(raw) {}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_uri_clip_new(IntPtr uri);
 
 		public UriClip (string uri) : base (IntPtr.Zero)
@@ -47,7 +47,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern void ges_uri_clip_set_mute(IntPtr raw, bool mute);
 
 		[GLib.Property ("mute")]
@@ -78,7 +78,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_uri_clip_get_uri(IntPtr raw);
 
 		[GLib.Property ("uri")]
@@ -114,7 +114,7 @@ namespace GES {
 
 		// End of the ABI representation.
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_uri_clip_get_type();
 
 		public static new GLib.GType GType { 
@@ -125,7 +125,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_uri_clip_is_muted(IntPtr raw);
 
 		public bool IsMuted { 

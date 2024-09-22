@@ -13,7 +13,7 @@ namespace GES {
 
 		public Pipeline (IntPtr raw) : base(raw) {}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_pipeline_new();
 
 		public Pipeline () : base (IntPtr.Zero)
@@ -55,7 +55,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern int ges_pipeline_get_mode(IntPtr raw);
 
 		[GLib.Property ("mode")]
@@ -141,7 +141,7 @@ namespace GES {
 
 		// End of the ABI representation.
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_pipeline_get_type();
 
 		public static new GLib.GType GType { 
@@ -152,7 +152,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_pipeline_get_thumbnail(IntPtr raw, IntPtr caps);
 
 		public Gst.Sample GetThumbnail(Gst.Caps caps) {
@@ -161,7 +161,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_pipeline_get_thumbnail_rgb24(IntPtr raw, int width, int height);
 
 		public Gst.Sample GetThumbnailRgb24(int width, int height) {
@@ -170,7 +170,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_pipeline_preview_get_audio_sink(IntPtr raw);
 
 		public Gst.Element PreviewGetAudioSink() {
@@ -179,7 +179,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_pipeline_preview_get_video_sink(IntPtr raw);
 
 		public Gst.Element PreviewGetVideoSink() {
@@ -188,21 +188,21 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern void ges_pipeline_preview_set_audio_sink(IntPtr raw, IntPtr sink);
 
 		public void PreviewSetAudioSink(Gst.Element sink) {
 			ges_pipeline_preview_set_audio_sink(Handle, sink == null ? IntPtr.Zero : sink.Handle);
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern void ges_pipeline_preview_set_video_sink(IntPtr raw, IntPtr sink);
 
 		public void PreviewSetVideoSink(Gst.Element sink) {
 			ges_pipeline_preview_set_video_sink(Handle, sink == null ? IntPtr.Zero : sink.Handle);
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern unsafe bool ges_pipeline_save_thumbnail(IntPtr raw, int width, int height, IntPtr format, IntPtr location, out IntPtr error);
 
 		public unsafe bool SaveThumbnail(int width, int height, string format, string location) {
@@ -217,7 +217,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_pipeline_set_mode(IntPtr raw, int mode);
 
 		public bool SetMode(GES.PipelineFlags mode) {
@@ -226,7 +226,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_pipeline_set_render_settings(IntPtr raw, IntPtr output_uri, IntPtr profile);
 
 		public bool SetRenderSettings(string output_uri, Gst.PbUtils.EncodingProfile profile) {
@@ -237,7 +237,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_pipeline_set_timeline(IntPtr raw, IntPtr timeline);
 
 		public bool SetTimeline(GES.Timeline timeline) {

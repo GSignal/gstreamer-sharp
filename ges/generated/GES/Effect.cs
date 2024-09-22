@@ -13,7 +13,7 @@ namespace GES {
 
 		public Effect (IntPtr raw) : base(raw) {}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_effect_new(IntPtr bin_description);
 
 		public Effect (string bin_description) : base (IntPtr.Zero)
@@ -73,7 +73,7 @@ namespace GES {
 
 		// End of the ABI representation.
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_effect_class_register_rate_property(IntPtr element_name, IntPtr property_name);
 
 		public static bool RegisterRateProperty(string element_name, string property_name) {
@@ -86,7 +86,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_effect_get_type();
 
 		public static new GLib.GType GType { 

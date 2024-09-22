@@ -13,7 +13,7 @@ namespace GES {
 
 		public MultiFileSource (IntPtr raw) : base(raw) {}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_multi_file_source_new(IntPtr uri);
 
 		public MultiFileSource (string uri) : base (IntPtr.Zero)
@@ -65,7 +65,7 @@ namespace GES {
 
 		// End of the ABI representation.
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_multi_file_source_get_type();
 
 		public static new GLib.GType GType { 

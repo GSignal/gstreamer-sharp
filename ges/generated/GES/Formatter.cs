@@ -128,7 +128,7 @@ namespace GES {
 
 		// End of the ABI representation.
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern void ges_formatter_class_register_metas(IntPtr name, IntPtr description, IntPtr extension, IntPtr mimetype, double version, int rank);
 
 		public static void RegisterMetas(string name, string description, string extension, string mimetype, double version, Gst.Rank rank) {
@@ -143,7 +143,7 @@ namespace GES {
 			GLib.Marshaller.Free (native_mimetype);
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_formatter_get_type();
 
 		public static new GLib.GType GType { 
@@ -154,7 +154,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern unsafe bool ges_formatter_can_load_uri(IntPtr uri, out IntPtr error);
 
 		public static unsafe bool CanLoadUri(string uri) {
@@ -167,7 +167,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern unsafe bool ges_formatter_can_save_uri(IntPtr uri, out IntPtr error);
 
 		public static unsafe bool CanSaveUri(string uri) {
@@ -180,7 +180,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_formatter_get_default();
 
 		public static GES.Asset Default { 
@@ -191,7 +191,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern unsafe bool ges_formatter_load_from_uri(IntPtr raw, IntPtr timeline, IntPtr uri, out IntPtr error);
 
 		public unsafe bool LoadFromUri(GES.Timeline timeline, string uri) {
@@ -204,7 +204,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern unsafe bool ges_formatter_save_to_uri(IntPtr raw, IntPtr timeline, IntPtr uri, bool overwrite, out IntPtr error);
 
 		public unsafe bool SaveToUri(GES.Timeline timeline, string uri, bool overwrite) {
@@ -217,7 +217,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_extractable_get_asset(IntPtr raw);
 
 		public GES.Asset Asset { 
@@ -228,7 +228,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_extractable_get_id(IntPtr raw);
 
 		public string Id { 
@@ -239,7 +239,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_extractable_set_asset(IntPtr raw, IntPtr asset);
 
 		public bool SetAsset(GES.Asset asset) {

@@ -18,7 +18,7 @@ namespace GES {
 			CreateNativeObject (new string [0], new GLib.Value [0]);
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern ulong ges_uri_clip_asset_get_duration(IntPtr raw);
 
 		[GLib.Property ("duration")]
@@ -83,7 +83,7 @@ namespace GES {
 
 		// End of the ABI representation.
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern void ges_uri_clip_asset_class_set_timeout(ulong timeout);
 
 		public static ulong Timeout { 
@@ -92,7 +92,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_uri_clip_asset_get_type();
 
 		public static new GLib.GType GType { 
@@ -103,7 +103,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern unsafe IntPtr ges_uri_clip_asset_finish(IntPtr res, out IntPtr error);
 
 		public static unsafe GES.UriClipAsset Finish(GLib.IAsyncResult res) {
@@ -114,7 +114,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern void ges_uri_clip_asset_new(IntPtr uri, IntPtr cancellable, GLibSharp.AsyncReadyCallbackNative cb, IntPtr user_data);
 
 		public static void New(string uri, GLib.Cancellable cancellable, GLib.AsyncReadyCallback cb) {
@@ -129,7 +129,7 @@ namespace GES {
 			New (uri, null, null);
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern unsafe IntPtr ges_uri_clip_asset_request_sync(IntPtr uri, out IntPtr error);
 
 		public static unsafe GES.UriClipAsset RequestSync(string uri) {
@@ -142,7 +142,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_uri_clip_asset_get_info(IntPtr raw);
 
 		public Gst.PbUtils.DiscovererInfo Info { 
@@ -153,7 +153,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_uri_clip_asset_get_stream_assets(IntPtr raw);
 
 		public GES.UriSourceAsset[] StreamAssets { 
@@ -164,7 +164,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_uri_clip_asset_is_image(IntPtr raw);
 
 		public bool IsImage { 

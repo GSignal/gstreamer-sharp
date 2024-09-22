@@ -13,7 +13,7 @@ namespace GES {
 
 		public Project (IntPtr raw) : base(raw) {}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_project_new(IntPtr uri);
 
 		public Project (string uri) : base (IntPtr.Zero)
@@ -31,7 +31,7 @@ namespace GES {
 			GLib.Marshaller.Free (native_uri);
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_project_get_uri(IntPtr raw);
 
 		[GLib.Property ("uri")]
@@ -367,7 +367,7 @@ namespace GES {
 
 		// End of the ABI representation.
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_project_get_type();
 
 		public static new GLib.GType GType { 
@@ -378,7 +378,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_project_add_asset(IntPtr raw, IntPtr asset);
 
 		public bool AddAsset(GES.Asset asset) {
@@ -387,7 +387,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_project_add_encoding_profile(IntPtr raw, IntPtr profile);
 
 		public bool AddEncodingProfile(Gst.PbUtils.EncodingProfile profile) {
@@ -396,7 +396,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_project_create_asset(IntPtr raw, IntPtr id, IntPtr extractable_type);
 
 		public bool CreateAsset(string id, GLib.GType extractable_type) {
@@ -411,7 +411,7 @@ namespace GES {
 			return CreateAsset (null, extractable_type);
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern unsafe IntPtr ges_project_create_asset_sync(IntPtr raw, IntPtr id, IntPtr extractable_type, out IntPtr error);
 
 		public unsafe GES.Asset CreateAssetSync(string id, GLib.GType extractable_type) {
@@ -428,7 +428,7 @@ namespace GES {
 			return CreateAssetSync (null, extractable_type);
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_project_get_asset(IntPtr raw, IntPtr id, IntPtr extractable_type);
 
 		public GES.Asset GetAsset(string id, GLib.GType extractable_type) {
@@ -439,7 +439,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_project_get_loading_assets(IntPtr raw);
 
 		public GES.Asset[] LoadingAssets { 
@@ -450,7 +450,7 @@ namespace GES {
 			}
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_project_list_assets(IntPtr raw, IntPtr filter);
 
 		public GES.Asset[] ListAssets(GLib.GType filter) {
@@ -459,7 +459,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern IntPtr ges_project_list_encoding_profiles(IntPtr raw);
 
 		public Gst.PbUtils.EncodingProfile[] ListEncodingProfiles() {
@@ -468,7 +468,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern unsafe bool ges_project_load(IntPtr raw, IntPtr timeline, out IntPtr error);
 
 		public unsafe bool Load(GES.Timeline timeline) {
@@ -479,7 +479,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern bool ges_project_remove_asset(IntPtr raw, IntPtr asset);
 
 		public bool RemoveAsset(GES.Asset asset) {
@@ -488,7 +488,7 @@ namespace GES {
 			return ret;
 		}
 
-		[DllImport("ges-1.0", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("ges-1.0-0.dll", CallingConvention = CallingConvention.Cdecl)]
 		static extern unsafe bool ges_project_save(IntPtr raw, IntPtr timeline, IntPtr uri, IntPtr formatter_asset, bool overwrite, out IntPtr error);
 
 		public unsafe bool Save(GES.Timeline timeline, string uri, GES.Asset formatter_asset, bool overwrite) {
